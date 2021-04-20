@@ -6,4 +6,6 @@ Target =  dbus-broker-enable
 [Action]
 Description = Automatic enable dbus-broker
 When = PostTransaction
-Exec = /usr/bin/systemctl disable dbus.service; /usr/bin/systemctl enable dbus-broker.service; /usr/bin/systemctl --global enable dbus-broker.service
+Exec = /usr/bin/systemctl disable dbus.service
+Exec = /usr/bin/systemctl enable dbus-broker.service
+Exec = /usr/bin/systemctl --global enable dbus-broker.service
